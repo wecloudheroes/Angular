@@ -1,0 +1,15 @@
+<form [formGroup]="rolesForm" (ngSubmit)="prueba()">
+    <label>
+        Nombre: 
+    <input type="text" name="nombre" formControlName="nombre"> 
+    </label>
+    <label>
+        Correo: 
+    <input type="text" name="correo" formControlName="correo"> 
+    </label>
+
+    <button [disabled]="!rolesForm.valid">Guardar</button>
+    <p>
+        Value{{rolesForm.status}}
+    </p>
+</form>
